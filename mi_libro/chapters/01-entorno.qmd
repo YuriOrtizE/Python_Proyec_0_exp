@@ -1,0 +1,57 @@
+
+---
+title: "Configuración del entorno de desarrollo"
+---
+
+# Módulo 0: Configuración del entorno de desarrollo
+
+## Objetivo del módulo
+
+Preparar un entorno de trabajo profesional y aislado para el desarrollo de scripts de Python, utilizando herramientas estándar de la industria: Miniconda, Git, GitHub y Visual Studio Code.
+
+## Convención de terminales en este documento
+
+- **Git Bash**: terminal recomendada para comandos `conda`, `git` y `python`. Se abre desde el menú inicio o dentro de VS Code.
+- **VS Code Terminal Integrada**: la terminal que aparece al presionar `Ctrl+Ñ` en VS Code. Debe configurarse con perfil `Git Bash`.
+- **PowerShell / cmd**: se usarán solo cuando se indique explícitamente. No se recomiendan para comandos `conda` por problemas de políticas de ejecución.
+
+**Siempre que veas un bloque de código, asume que se ejecuta en Git Bash a menos que se indique lo contrario.**
+
+## 1. ¿Por qué necesitamos un entorno aislado?
+
+En programación, un **entorno** es el conjunto de versiones de Python, bibliotecas y herramientas que utiliza un proyecto. Dos proyectos pueden requerir versiones distintas de la misma biblioteca. Si se instalaran globalmente, entrarían en conflicto.
+
+Por ejemplo:
+- Proyecto A: necesita Python 3.8 + NumPy 1.19
+- Proyecto B: necesita Python 3.10 + NumPy 1.24
+
+Un **entorno virtual** (o entorno aislado) permite tener ambos instalados por separado y activar el que se necesita en cada momento sin conflictos.
+
+## 2. Comandos básicos de conda (ejecutar en Git Bash)
+
+| Acción | Comando |
+|--------|---------|
+| Ver versión de conda | `conda --version` |
+| Listar entornos existentes | `conda info --envs` |
+| Crear nuevo entorno | `conda create -n nombre python=x.x -y` |
+| Activar entorno | `conda activate nombre` |
+| Desactivar entorno | `conda deactivate` |
+| Instalar paquete desde conda-forge | `conda install -c conda-forge paquete` |
+
+## 3. Verificación del entorno (código ejecutable)
+
+```{python}
+import sys
+import numpy as np
+import matplotlib
+import scipy
+import control
+
+print("=== Verificación del entorno ===")
+print(f"Python: {sys.version}")
+print(f"NumPy: {np.__version__}")
+print(f"Matplotlib: {matplotlib.__version__}")
+print(f"SciPy: {scipy.__version__}")
+print(f"Control: {control.__version__}")
+print("[OK] Entorno listo")
+

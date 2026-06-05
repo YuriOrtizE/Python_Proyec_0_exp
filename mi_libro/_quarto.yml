@@ -1,0 +1,55 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Python de Cero a Experto en Ingeniería"
+  author: "Ing. Yuri Ortiz Eyde"
+  date: today
+  subtitle: "Automatización, control adaptativo y sistemas MIMO"
+  description: |
+    Este libro cubre desde los fundamentos de Python hasta aplicaciones
+    avanzadas en control de sistemas, simulación de plantas y automatización.
+  cover-image: cover.png          # Opcional: añade una imagen más adelante
+  chapters:
+    - index.qmd
+    - part: "Fundamentos"
+      chapters:
+        - chapters/01-entorno.qmd
+        - chapters/02-variables-tipos.qmd
+        - chapters/03-control-flujo.qmd
+        - chapters/04-funciones.qmd
+    - part: "Cálculo numérico y control"
+      chapters:
+        - chapters/05-numpy.qmd
+        - chapters/06-scipy-control.qmd
+        - chapters/07-simulacion.qmd
+    - part: "Proyectos integradores"
+      chapters:
+        - chapters/08-pid.qmd
+        - chapters/09-mimo.qmd
+
+execute:
+  kernel: curso_python      # Usa el kernel que creaste
+  cache: true
+  echo: true
+  eval: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Mostrar código"
+    number-sections: true
+  pdf:
+    documentclass: scrreprt
+    geometry:
+      - top=25mm
+      - bottom=25mm
+      - left=25mm
+      - right=20mm
+    fontsize: 11pt
+    toc: true
+    number-sections: true

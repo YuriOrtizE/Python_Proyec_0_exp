@@ -1,0 +1,43 @@
+# Módulo 0: Configuración del entorno de desarrollo (Documento de lectura)
+
+## Objetivo del módulo
+Preparar un entorno de trabajo profesional y aislado para el desarrollo de scripts de Python, utilizando herramientas estándar de la industria: Miniconda, Git, GitHub y Visual Studio Code.
+
+## 1. ¿Por qué necesitamos un entorno aislado?
+
+En programación, un **entorno** es el conjunto de versiones de Python, bibliotecas y herramientas que utiliza un proyecto. Dos proyectos pueden requerir versiones distintas de la misma biblioteca. Si se instalaran globalmente, entrarían en conflicto.
+
+Un **entorno virtual** (o entorno aislado) permite tener ambos instalados por separado y activar el que se necesita en cada momento sin conflictos.
+
+## 2. Miniconda vs. Anaconda
+
+| Característica | Miniconda | Anaconda |
+|----------------|-----------|----------|
+| Tamaño | ~400 MB | ~3-5 GB |
+| Paquetes preinstalados | Solo conda y Python | >250 paquetes científicos |
+| Ideal para | Usuarios avanzados, control total | Principiantes, análisis rápido |
+
+## 3. Comandos básicos de conda
+
+| Acción | Comando |
+|--------|---------|
+| Ver versión de conda | `conda --version` |
+| Listar entornos existentes | `conda info --envs` |
+| Crear nuevo entorno | `conda create -n nombre python=x.x -y` |
+| Activar entorno | `conda activate nombre` |
+| Desactivar entorno | `conda deactivate` |
+| Instalar paquete desde conda-forge | `conda install -c conda-forge paquete` |
+
+## 4. Canales (`channels`) y términos de servicio
+
+Los canales son repositorios de paquetes. El canal oficial de Anaconda es `defaults` (que incluye `main`, `r`, `msys2`).
+
+### Aceptar los términos de servicio (solo si usas `defaults`)
+
+```bash
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/msys2
+EOF
+
+
