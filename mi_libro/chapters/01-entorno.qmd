@@ -1,9 +1,8 @@
-
 ---
 title: "Configuración del entorno de desarrollo"
 ---
 
-# Módulo 0: Configuración del entorno de desarrollo
+## Módulo 0: Configuración del entorno de desarrollo
 
 ## Objetivo del módulo
 
@@ -17,7 +16,7 @@ Preparar un entorno de trabajo profesional y aislado para el desarrollo de scrip
 
 **Siempre que veas un bloque de código, asume que se ejecuta en Git Bash a menos que se indique lo contrario.**
 
-## 1. ¿Por qué necesitamos un entorno aislado?
+## ¿Por qué necesitamos un entorno aislado?
 
 En programación, un **entorno** es el conjunto de versiones de Python, bibliotecas y herramientas que utiliza un proyecto. Dos proyectos pueden requerir versiones distintas de la misma biblioteca. Si se instalaran globalmente, entrarían en conflicto.
 
@@ -27,7 +26,7 @@ Por ejemplo:
 
 Un **entorno virtual** (o entorno aislado) permite tener ambos instalados por separado y activar el que se necesita en cada momento sin conflictos.
 
-## 2. Comandos básicos de conda (ejecutar en Git Bash)
+## Comandos básicos de conda (ejecutar en Git Bash)
 
 | Acción | Comando |
 |--------|---------|
@@ -38,9 +37,10 @@ Un **entorno virtual** (o entorno aislado) permite tener ambos instalados por se
 | Desactivar entorno | `conda deactivate` |
 | Instalar paquete desde conda-forge | `conda install -c conda-forge paquete` |
 
-## 3. Verificación del entorno (código ejecutable)
+## Verificación del entorno (código ejecutable)
 
 ```{python}
+#| echo: true
 import sys
 import numpy as np
 import matplotlib
@@ -54,4 +54,4 @@ print(f"Matplotlib: {matplotlib.__version__}")
 print(f"SciPy: {scipy.__version__}")
 print(f"Control: {control.__version__}")
 print("[OK] Entorno listo")
-
+```

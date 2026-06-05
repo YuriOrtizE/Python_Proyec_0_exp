@@ -1,5 +1,48 @@
-# Preface {.unnumbered}
+---
+title: "Python para Ingeniería de Control"
+subtitle: "De Cero a Sistemas MIMO"
+author: "Ing. Yuri W. Ortiz E."
+date: today
+---
 
-This is a Quarto book.
+# Introducción
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Este libro está diseñado para ingenieros, profesionales de la automatización
+y estudiantes avanzados que desean aprender Python desde cero y aplicarlo a
+problemas reales de control de sistemas, simulación de plantas y automatización
+industrial.
+
+## ¿Qué aprenderás?
+
+- **Fundamentos de Python**: variables, tipos, estructuras de control, funciones
+- **Cálculo numérico**: NumPy y SciPy para simulación de sistemas dinámicos
+- **Visualización de datos**: Matplotlib para análisis de señales y respuestas
+- **Control de sistemas**: Librería `control` para diseño y simulación
+- **Sistemas MIMO**: Implementación de controladores para sistemas multivariables
+- **Automatización**: Comunicación con hardware y scripting industrial
+
+## Estructura del libro
+
+| Módulo | Tema |
+|--------|------|
+| 0 | Configuración del entorno de desarrollo |
+| 1 | Fundamentos de Python |
+| 2 | Estructuras de control |
+| 3 | Funciones y módulos |
+| 4 | NumPy y cálculo numérico |
+| 5 | Matplotlib y visualización |
+| 6 | Control de sistemas con Python |
+| 7 | Sistemas MIMO |
+| 8 | Proyecto integrador |
+
+## Requisitos previos
+
+- Conocimientos básicos de álgebra lineal y ecuaciones diferenciales (útiles pero no indispensables)
+- Computadora con Windows, Linux o macOS
+- Miniconda instalado (se explica en el Módulo 0)
+
+## Sobre el autor
+
+**Ing. Yuri W. Ortiz E.** es ingeniero especializado en automatización y control
+de sistemas, con experiencia en el desarrollo de sistemas MIMO, control adaptativo
+y aplicaciones de inteligencia artificial en procesos industriales.

@@ -1,0 +1,222 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Python para Ingeniería de Control",
+    "section": "",
+    "text": "1 Introducción\nEste libro está diseñado para ingenieros, profesionales de la automatización y estudiantes avanzados que desean aprender Python desde cero y aplicarlo a problemas reales de control de sistemas, simulación de plantas y automatización industrial.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python para Ingeniería de Control</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#qué-aprenderás",
+    "href": "index.html#qué-aprenderás",
+    "title": "Python para Ingeniería de Control",
+    "section": "1.1 ¿Qué aprenderás?",
+    "text": "1.1 ¿Qué aprenderás?\n\nFundamentos de Python: variables, tipos, estructuras de control, funciones\nCálculo numérico: NumPy y SciPy para simulación de sistemas dinámicos\nVisualización de datos: Matplotlib para análisis de señales y respuestas\nControl de sistemas: Librería control para diseño y simulación\nSistemas MIMO: Implementación de controladores para sistemas multivariables\nAutomatización: Comunicación con hardware y scripting industrial",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python para Ingeniería de Control</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#estructura-del-libro",
+    "href": "index.html#estructura-del-libro",
+    "title": "Python para Ingeniería de Control",
+    "section": "1.2 Estructura del libro",
+    "text": "1.2 Estructura del libro\n\n\n\nMódulo\nTema\n\n\n\n\n0\nConfiguración del entorno de desarrollo\n\n\n1\nFundamentos de Python\n\n\n2\nEstructuras de control\n\n\n3\nFunciones y módulos\n\n\n4\nNumPy y cálculo numérico\n\n\n5\nMatplotlib y visualización\n\n\n6\nControl de sistemas con Python\n\n\n7\nSistemas MIMO\n\n\n8\nProyecto integrador",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python para Ingeniería de Control</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#requisitos-previos",
+    "href": "index.html#requisitos-previos",
+    "title": "Python para Ingeniería de Control",
+    "section": "1.3 Requisitos previos",
+    "text": "1.3 Requisitos previos\n\nConocimientos básicos de álgebra lineal y ecuaciones diferenciales (útiles pero no indispensables)\nComputadora con Windows, Linux o macOS\nMiniconda instalado (se explica en el Módulo 0)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python para Ingeniería de Control</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sobre-el-autor",
+    "href": "index.html#sobre-el-autor",
+    "title": "Python para Ingeniería de Control",
+    "section": "1.4 Sobre el autor",
+    "text": "1.4 Sobre el autor\nIng. Yuri W. Ortiz E. es ingeniero especializado en automatización y control de sistemas, con experiencia en el desarrollo de sistemas MIMO, control adaptativo y aplicaciones de inteligencia artificial en procesos industriales.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python para Ingeniería de Control</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-entorno.html",
+    "href": "chapters/01-entorno.html",
+    "title": "2  Configuración del entorno de desarrollo",
+    "section": "",
+    "text": "2.1 Módulo 0: Configuración del entorno de desarrollo",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configuración del entorno de desarrollo</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-entorno.html#objetivo-del-módulo",
+    "href": "chapters/01-entorno.html#objetivo-del-módulo",
+    "title": "2  Configuración del entorno de desarrollo",
+    "section": "2.2 Objetivo del módulo",
+    "text": "2.2 Objetivo del módulo\nPreparar un entorno de trabajo profesional y aislado para el desarrollo de scripts de Python, utilizando herramientas estándar de la industria: Miniconda, Git, GitHub y Visual Studio Code.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configuración del entorno de desarrollo</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-entorno.html#convención-de-terminales-en-este-documento",
+    "href": "chapters/01-entorno.html#convención-de-terminales-en-este-documento",
+    "title": "2  Configuración del entorno de desarrollo",
+    "section": "2.3 Convención de terminales en este documento",
+    "text": "2.3 Convención de terminales en este documento\n\nGit Bash: terminal recomendada para comandos conda, git y python. Se abre desde el menú inicio o dentro de VS Code.\nVS Code Terminal Integrada: la terminal que aparece al presionar Ctrl+Ñ en VS Code. Debe configurarse con perfil Git Bash.\nPowerShell / cmd: se usarán solo cuando se indique explícitamente. No se recomiendan para comandos conda por problemas de políticas de ejecución.\n\nSiempre que veas un bloque de código, asume que se ejecuta en Git Bash a menos que se indique lo contrario.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configuración del entorno de desarrollo</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-entorno.html#por-qué-necesitamos-un-entorno-aislado",
+    "href": "chapters/01-entorno.html#por-qué-necesitamos-un-entorno-aislado",
+    "title": "2  Configuración del entorno de desarrollo",
+    "section": "2.4 ¿Por qué necesitamos un entorno aislado?",
+    "text": "2.4 ¿Por qué necesitamos un entorno aislado?\nEn programación, un entorno es el conjunto de versiones de Python, bibliotecas y herramientas que utiliza un proyecto. Dos proyectos pueden requerir versiones distintas de la misma biblioteca. Si se instalaran globalmente, entrarían en conflicto.\nPor ejemplo: - Proyecto A: necesita Python 3.8 + NumPy 1.19 - Proyecto B: necesita Python 3.10 + NumPy 1.24\nUn entorno virtual (o entorno aislado) permite tener ambos instalados por separado y activar el que se necesita en cada momento sin conflictos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configuración del entorno de desarrollo</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-entorno.html#comandos-básicos-de-conda-ejecutar-en-git-bash",
+    "href": "chapters/01-entorno.html#comandos-básicos-de-conda-ejecutar-en-git-bash",
+    "title": "2  Configuración del entorno de desarrollo",
+    "section": "2.5 Comandos básicos de conda (ejecutar en Git Bash)",
+    "text": "2.5 Comandos básicos de conda (ejecutar en Git Bash)\n\n\n\n\n\n\n\nAcción\nComando\n\n\n\n\nVer versión de conda\nconda --version\n\n\nListar entornos existentes\nconda info --envs\n\n\nCrear nuevo entorno\nconda create -n nombre python=x.x -y\n\n\nActivar entorno\nconda activate nombre\n\n\nDesactivar entorno\nconda deactivate\n\n\nInstalar paquete desde conda-forge\nconda install -c conda-forge paquete",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configuración del entorno de desarrollo</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-entorno.html#verificación-del-entorno-código-ejecutable",
+    "href": "chapters/01-entorno.html#verificación-del-entorno-código-ejecutable",
+    "title": "2  Configuración del entorno de desarrollo",
+    "section": "2.6 Verificación del entorno (código ejecutable)",
+    "text": "2.6 Verificación del entorno (código ejecutable)\n\n\nMostrar código\nimport sys\nimport numpy as np\nimport matplotlib\nimport scipy\nimport control\n\nprint(\"=== Verificación del entorno ===\")\nprint(f\"Python: {sys.version}\")\nprint(f\"NumPy: {np.__version__}\")\nprint(f\"Matplotlib: {matplotlib.__version__}\")\nprint(f\"SciPy: {scipy.__version__}\")\nprint(f\"Control: {control.__version__}\")\nprint(\"[OK] Entorno listo\")\n\n\n=== Verificación del entorno ===\nPython: 3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]\nNumPy: 2.2.6\nMatplotlib: 3.10.9\nSciPy: 1.15.2\nControl: 0.10.2\n[OK] Entorno listo",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Configuración del entorno de desarrollo</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html",
+    "href": "chapters/02-variables-tipos.html",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "",
+    "text": "3.1 Módulo 1: Fundamentos de Python",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#objetivo-del-módulo",
+    "href": "chapters/02-variables-tipos.html#objetivo-del-módulo",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.2 Objetivo del módulo",
+    "text": "3.2 Objetivo del módulo\nAdquirir los conceptos básicos de programación en Python: variables, tipos de datos, entrada/salida por consola, operadores, estructuras condicionales y buenas prácticas iniciales.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#variables-y-tipado-dinámico",
+    "href": "chapters/02-variables-tipos.html#variables-y-tipado-dinámico",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.3 Variables y tipado dinámico",
+    "text": "3.3 Variables y tipado dinámico\nUna variable es un nombre que hace referencia a un valor almacenado en memoria. En Python no es necesario declarar el tipo; se infiere al asignar un valor.\n\n\nMostrar código\nx = 10\ny = 3.14\nnombre = \"PID\"\nactivo = True\n\nprint(f\"x={x}, tipo={type(x)}\")\nprint(f\"y={y}, tipo={type(y)}\")\nprint(f\"nombre={nombre}, tipo={type(nombre)}\")\nprint(f\"activo={activo}, tipo={type(activo)}\")\n\n\nx=10, tipo=&lt;class 'int'&gt;\ny=3.14, tipo=&lt;class 'float'&gt;\nnombre=PID, tipo=&lt;class 'str'&gt;\nactivo=True, tipo=&lt;class 'bool'&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#tipos-de-datos-básicos",
+    "href": "chapters/02-variables-tipos.html#tipos-de-datos-básicos",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.4 Tipos de datos básicos",
+    "text": "3.4 Tipos de datos básicos\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\nint\nEntero\n42\n\n\nfloat\nDecimal\n3.1416\n\n\nstr\nCadena\n\"Hola\"\n\n\nbool\nBooleano\nTrue / False",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#operadores-aritméticos",
+    "href": "chapters/02-variables-tipos.html#operadores-aritméticos",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.5 Operadores aritméticos",
+    "text": "3.5 Operadores aritméticos\n\n\nMostrar código\na, b = 10, 3\nprint(f\"Suma: {a + b}\")\nprint(f\"Resta: {a - b}\")\nprint(f\"Multiplicación: {a * b}\")\nprint(f\"División: {a / b}\")\nprint(f\"División entera: {a // b}\")\nprint(f\"Módulo: {a % b}\")\nprint(f\"Potencia: {a ** b}\")\n\n\nSuma: 13\nResta: 7\nMultiplicación: 30\nDivisión: 3.3333333333333335\nDivisión entera: 3\nMódulo: 1\nPotencia: 1000",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#operadores-de-comparación",
+    "href": "chapters/02-variables-tipos.html#operadores-de-comparación",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.6 Operadores de comparación",
+    "text": "3.6 Operadores de comparación\n\n\nMostrar código\na, b = 10, 3\nprint(f\"a &gt; b: {a &gt; b}\")\nprint(f\"a == b: {a == b}\")\nprint(f\"a != b: {a != b}\")\n\n\na &gt; b: True\na == b: False\na != b: True",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#operadores-lógicos",
+    "href": "chapters/02-variables-tipos.html#operadores-lógicos",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.7 Operadores lógicos",
+    "text": "3.7 Operadores lógicos\n\n\nMostrar código\nverdadero = True\nfalso = False\nprint(f\"True and False: {verdadero and falso}\")\nprint(f\"True or False: {verdadero or falso}\")\nprint(f\"not True: {not verdadero}\")\n\n\nTrue and False: False\nTrue or False: True\nnot True: False",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#estructuras-condicionales-if-elif-else",
+    "href": "chapters/02-variables-tipos.html#estructuras-condicionales-if-elif-else",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.8 Estructuras condicionales (if-elif-else)",
+    "text": "3.8 Estructuras condicionales (if-elif-else)\n\n\nMostrar código\ntemperatura = 85\n\nif temperatura &gt; 100:\n    estado = \"Sobrecalentamiento\"\nelif temperatura &gt; 80:\n    estado = \"Alerta amarilla\"\nelse:\n    estado = \"Normal\"\n\nprint(f\"Temperatura: {temperatura}°C - Estado: {estado}\")\n\n\nTemperatura: 85°C - Estado: Alerta amarilla",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#ejercicios-prácticos",
+    "href": "chapters/02-variables-tipos.html#ejercicios-prácticos",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.9 Ejercicios prácticos",
+    "text": "3.9 Ejercicios prácticos\n\n3.9.1 Ejercicio 1: Calculadora de parámetros de motor\n\n\nMostrar código\nimport math\n\nvoltaje = 220\ncorriente = 5\nvelocidad_rpm = 1500\n\npotencia = voltaje * corriente\npar = (potencia * 60) / (2 * math.pi * velocidad_rpm)\n\nprint(f\"Potencia eléctrica: {potencia:.2f} W\")\nprint(f\"Par motor: {par:.3f} Nm\")\n\n\nPotencia eléctrica: 1100.00 W\nPar motor: 7.003 Nm\n\n\n\n\n3.9.2 Ejercicio 2: Conversor de temperaturas\n\n\nMostrar código\ndef celsius_a_fahrenheit(c):\n    return (c * 9/5) + 32\n\ndef fahrenheit_a_celsius(f):\n    return (f - 32) * 5/9\n\nprint(f\"25°C = {celsius_a_fahrenheit(25):.1f}°F\")\nprint(f\"77°F = {fahrenheit_a_celsius(77):.1f}°C\")\n\n\n25°C = 77.0°F\n77°F = 25.0°C\n\n\n\n\n3.9.3 Ejercicio 3: Validación de rango\n\n\nMostrar código\npresion = 75\n\nif 0 &lt;= presion &lt;= 100:\n    print(f\"Presión {presion} bar: VÁLIDA\")\nelse:\n    print(f\"Presión {presion} bar: FUERA DE RANGO\")\n\n\nPresión 75 bar: VÁLIDA",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#buenas-prácticas",
+    "href": "chapters/02-variables-tipos.html#buenas-prácticas",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.10 Buenas prácticas",
+    "text": "3.10 Buenas prácticas\n\nUsar nombres de variables descriptivos\nMantener indentación consistente (4 espacios)\nEscribir comentarios útiles con #\nProbar el código con diferentes valores",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-variables-tipos.html#conclusión-del-módulo-1",
+    "href": "chapters/02-variables-tipos.html#conclusión-del-módulo-1",
+    "title": "3  Fundamentos de Python: variables, tipos y operadores",
+    "section": "3.11 Conclusión del Módulo 1",
+    "text": "3.11 Conclusión del Módulo 1\nAl finalizar este módulo, podrás: - Declarar variables y usar los tipos básicos - Realizar operaciones aritméticas y lógicas - Tomar decisiones con estructuras condicionales - Escribir programas simples",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamentos de Python: variables, tipos y operadores</span>"
+    ]
+  }
+]

@@ -1,0 +1,146 @@
+---
+title: "Fundamentos de Python: variables, tipos y operadores"
+---
+
+## Módulo 1: Fundamentos de Python
+
+## Objetivo del módulo
+
+Adquirir los conceptos básicos de programación en Python: variables, tipos de datos, entrada/salida por consola, operadores, estructuras condicionales y buenas prácticas iniciales.
+
+## Variables y tipado dinámico
+
+Una variable es un nombre que hace referencia a un valor almacenado en memoria. En Python no es necesario declarar el tipo; se infiere al asignar un valor.
+
+```{python}
+#| echo: true
+x = 10
+y = 3.14
+nombre = "PID"
+activo = True
+
+print(f"x={x}, tipo={type(x)}")
+print(f"y={y}, tipo={type(y)}")
+print(f"nombre={nombre}, tipo={type(nombre)}")
+print(f"activo={activo}, tipo={type(activo)}")
+```
+
+## Tipos de datos básicos
+
+| Tipo | Descripción | Ejemplo |
+|------|-------------|---------|
+| `int` | Entero | `42` |
+| `float` | Decimal | `3.1416` |
+| `str` | Cadena | `"Hola"` |
+| `bool` | Booleano | `True` / `False` |
+
+## Operadores aritméticos
+
+```{python}
+#| echo: true
+a, b = 10, 3
+print(f"Suma: {a + b}")
+print(f"Resta: {a - b}")
+print(f"Multiplicación: {a * b}")
+print(f"División: {a / b}")
+print(f"División entera: {a // b}")
+print(f"Módulo: {a % b}")
+print(f"Potencia: {a ** b}")
+```
+
+## Operadores de comparación
+
+```{python}
+#| echo: true
+a, b = 10, 3
+print(f"a > b: {a > b}")
+print(f"a == b: {a == b}")
+print(f"a != b: {a != b}")
+```
+
+## Operadores lógicos
+
+```{python}
+#| echo: true
+verdadero = True
+falso = False
+print(f"True and False: {verdadero and falso}")
+print(f"True or False: {verdadero or falso}")
+print(f"not True: {not verdadero}")
+```
+
+## Estructuras condicionales (if-elif-else)
+
+```{python}
+#| echo: true
+temperatura = 85
+
+if temperatura > 100:
+    estado = "Sobrecalentamiento"
+elif temperatura > 80:
+    estado = "Alerta amarilla"
+else:
+    estado = "Normal"
+
+print(f"Temperatura: {temperatura}°C - Estado: {estado}")
+```
+
+## Ejercicios prácticos
+
+### Ejercicio 1: Calculadora de parámetros de motor
+
+```{python}
+#| echo: true
+import math
+
+voltaje = 220
+corriente = 5
+velocidad_rpm = 1500
+
+potencia = voltaje * corriente
+par = (potencia * 60) / (2 * math.pi * velocidad_rpm)
+
+print(f"Potencia eléctrica: {potencia:.2f} W")
+print(f"Par motor: {par:.3f} Nm")
+```
+
+### Ejercicio 2: Conversor de temperaturas
+
+```{python}
+#| echo: true
+def celsius_a_fahrenheit(c):
+    return (c * 9/5) + 32
+
+def fahrenheit_a_celsius(f):
+    return (f - 32) * 5/9
+
+print(f"25°C = {celsius_a_fahrenheit(25):.1f}°F")
+print(f"77°F = {fahrenheit_a_celsius(77):.1f}°C")
+```
+
+### Ejercicio 3: Validación de rango
+
+```{python}
+#| echo: true
+presion = 75
+
+if 0 <= presion <= 100:
+    print(f"Presión {presion} bar: VÁLIDA")
+else:
+    print(f"Presión {presion} bar: FUERA DE RANGO")
+```
+
+## Buenas prácticas
+
+- Usar nombres de variables descriptivos
+- Mantener indentación consistente (4 espacios)
+- Escribir comentarios útiles con `#`
+- Probar el código con diferentes valores
+
+## Conclusión del Módulo 1
+
+Al finalizar este módulo, podrás:
+- Declarar variables y usar los tipos básicos
+- Realizar operaciones aritméticas y lógicas
+- Tomar decisiones con estructuras condicionales
+- Escribir programas simples
